@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halfagiraf Solar Sim</title>
+  <meta name="description" content="A small, creative web app scaffolded by agents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__blob bg__blob--a"></div>
+    <div class="bg__blob bg__blob--b"></div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <header class="top">
+    <div class="top__badge">Halfagiraf</div>
+    <h1 class="top__title">Halfagiraf Solar Sim</h1>
+    <p class="top__subtitle">A small creative studio site with a tiny brief-builder app. Fast, opinionated, practical.</p>
+    <div class="top__actions">
+      <a class="btn btn--primary" href="#brief">Generate a brief</a>
+      <a class="btn btn--ghost" href="#services">Services</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="card" id="brief">
+      <div class="card__head">
+        <h2>Brief Builder</h2>
+        <p>Fill a few fields, get a crisp draft brief you can paste into Linear.</p>
+      </div>
+
+      <form class="form" id="briefForm">
+        <label>
+          <span>Client</span>
+          <input name="client" placeholder="Acme Homes" autocomplete="off" />
+        </label>
+        <label>
+          <span>Industry</span>
+          <input name="industry" placeholder="Estate agency" autocomplete="off" />
+        </label>
+        <label>
+          <span>Goal</span>
+          <select name="goal">
+            <option>Generate qualified leads</option>
+            <option>Clarify positioning</option>
+            <option>Launch a new product</option>
+            <option>Improve conversion rate</option>
+            <option>Build trust</option>
+          </select>
+        </label>
+        <label>
+          <span>Tone</span>
+          <select name="tone">
+            <option>Confident, human</option>
+            <option>Minimal, premium</option>
+            <option>Playful, direct</option>
+            <option>Warm, reassuring</option>
+            <option>Sharp, technical</option>
+          </select>
+        </label>
+        <label>
+          <span>Deadline</span>
+          <select name="deadline">
+            <option>1 week</option>
+            <option>2 weeks</option>
+            <option>1 month</option>
+            <option>6 weeks</option>
+          </select>
+        </label>
+        <label>
+          <span>Budget band</span>
+          <select name="budget">
+            <option>Starter</option>
+            <option>Standard</option>
+            <option>Premium</option>
+          </select>
+        </label>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Generate</button>
+          <button class="btn btn--ghost" type="button" id="randomize">Randomize</button>
+        </div>
+      </form>
+
+      <div class="output">
+        <div class="output__bar">
+          <div class="output__title">Draft</div>
+          <button class="btn btn--tiny" type="button" id="copy">Copy</button>
+        </div>
+        <pre class="output__pre" id="draft">(Generate a brief to see output.)</pre>
+      </div>
+    </section>
+
+    <section class="grid" id="services">
+      <article class="tile">
+        <h3>Strategy Sprint</h3>
+        <p>One focused week to define the story, the offer, and the page structure. No fluff.</p>
+        <div class="tag">Fixed scope</div>
+      </article>
+      <article class="tile">
+        <h3>Design and Build</h3>
+        <p>Fast, modern, responsive pages with sharp copy, measured UX, and clean deployment.</p>
+        <div class="tag">Ship weekly</div>
+      </article>
+      <article class="tile">
+        <h3>Care Plan</h3>
+        <p>Updates, performance, analytics sanity checks, and small improvements that compound.</p>
+        <div class="tag">Always-on</div>
+      </article>
+      <article class="tile">
+        <h3>AI Assist</h3>
+        <p>Practical agent workflows: research, issue creation, scaffold PRs, and iteration from test feedback.</p>
+        <div class="tag">Tooling</div>
+      </article>
+    </section>
+
+    <section class="card values" id="values">
+      <h2>Values</h2>
+      <div class="values__grid">
+        <div class="value"><div class="value__k">Clarity</div><div class="value__v">Say the thing. Cut the rest.</div></div>
+        <div class="value"><div class="value__k">Tempo</div><div class="value__v">Small releases, tight loops.</div></div>
+        <div class="value"><div class="value__k">Craft</div><div class="value__v">Design is in the details.</div></div>
+        <div class="value"><div class="value__k">Evidence</div><div class="value__v">Measure impact, keep receipts.</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__row">
+      <div class="foot__left">Halfagiraf</div>
+      <div class="foot__right">Built for GitHub Pages. Designed to be edited fast.</div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
